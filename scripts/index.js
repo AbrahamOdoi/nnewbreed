@@ -22,7 +22,7 @@
 		});
 		
 		
-		var watchId = navigator.geolocation.watchPostition(onSucess, onError, {
+		var watchId = navigator.geolocation.watchPosition(onSucess, onError, {
 			timeout : 30000
 		});
 
@@ -34,7 +34,6 @@
 	
 	
 	var onSucess = function(position) {
-		
 		var element = document.getElementById('displayPositionWatch');
 		element.innerHTML = 'Latitude: ' + position.coords.latitude + '<br />' + 'Longitude: ' + position.coords.longitude + '<br />' + '<hr />' + element.innerHTML;
 	}
